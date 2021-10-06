@@ -19,7 +19,7 @@ export const ClubUpdates = (props) => {
 
 
 	const Content = () => {
-		return <h1>pp</h1>;
+		return <h1>:pp</h1>;
 	}
 
 

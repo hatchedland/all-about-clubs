@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import { Navbar } from '../navbar/Navbar'
 import './Home.css'
 import { Arrow } from '../icons/Icons'

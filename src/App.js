@@ -5,14 +5,24 @@ import { Feed } from './components/feedsection/NewsFeed';
 import { AboutUs } from './components/aboutus/AboutUs';
 import { Club } from './components/club/Club';
 
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+
 function App() {
+
+  const fee = "idk"
   return (
     <div className="App">
-      {/* <Home /> */}
-      {/* <Feed /> */}
-      {/* <AboutUs /> */}
-      <Club/>
-      </div>
+    
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/feed" component={Feed} />
+          <Route path="/aboutus" component={AboutUs} />
+          <Route path="/:fee" component={Club} />
+
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
