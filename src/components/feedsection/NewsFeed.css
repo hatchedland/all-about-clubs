@@ -1,0 +1,37 @@
+.news-feed-section{
+	display: flex;
+	flex-direction: column;
+}
+.news-feed-folder{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.archieve{
+	display: flex;
+	gap: 2em;
+	border: 2px solid red;
+	align-self: center;
+	flex-wrap: wrap;
+}
+.archieve .block{
+	border: 2px solid green;
+	width: 12em;
+	height: 12em;
+	text-align: center;
+
+}
+.block .card-info{
+	position: relative;
+	top: 50%;
+	margin: auto;
+	text-align: justify;
+	text-align: justify;
+	width: min-content;
+	font-size: 1.5em;
+}
+.news-folder{
+	height: 70vh;
+	overflow: hidden;
+}

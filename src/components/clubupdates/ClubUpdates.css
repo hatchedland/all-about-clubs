@@ -1,0 +1,19 @@
+.feed-box-wrapper{
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	padding: 2em 2em;
+	align-self: flex-end;
+
+}
+.feed-box{
+ border: 2px solid blue;
+
+}
+.heading-wrapper{
+	display: flex;
+}
+.club-name-infeed{
+	font-size: small;
+	opacity: 0.6;
+}

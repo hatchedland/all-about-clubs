@@ -1,0 +1,36 @@
+.about-us{
+	display: flex;
+	flex-direction: column;
+}
+.about-us-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.subscribe{
+	font-size: 1.5em;
+}
+.email-form{
+	display: flex;
+	width: min-content;
+	
+}
+input{
+	font-size: 1.2rem;
+	min-width: 300px;
+	border: none ;
+
+	padding-bottom: 3px;
+	border-bottom: 1px solid red;
+	outline: none;
+	font-style: italic;
+}
+.submit{
+	width: min-content;
+	height: min-content;
+}
+.the-team{
+	display: flex;
+	justify-content: center;
+}

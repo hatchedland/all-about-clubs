@@ -1,0 +1,24 @@
+.header{
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 2em;
+}
+.navbar ul{
+	display: flex;
+	align-items: center;
+	width: 12em;
+	gap: 2em;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	list-style: none;
+	font-style: italic;
+	font-size: 18px;
+
+}
+.navbar li{
+	padding-bottom: 3px;
+	border-bottom: 1px solid ;
+}
