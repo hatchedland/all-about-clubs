@@ -3,21 +3,29 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 2em;
+	
 }
 .home-content{
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.site-description{
 	width: 90%;
 	font-size: 2.5em;
 	text-align: justify;
 	align-self: center;
-}
 
+}
 .explore{
 	float: right;
 	display: flex;
 	align-items: center;
 	gap: 0.5em;
 	font-size: 3em;
-	font-weight: 300;
+	font-weight:200;
 	font-style: italic;
 	align-self: flex-end;
 }
+

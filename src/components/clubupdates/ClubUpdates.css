@@ -1,19 +1,71 @@
+
 .feed-box-wrapper{
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
 	padding: 2em 2em;
 	align-self: flex-end;
+	max-width: 50em;
+	overflow-y: scroll;
+	overflow-x:hidden;
+	height: 70vh;
+	scroll-behavior: smooth;
+	
+}
+.feed-box-wrapper::-webkit-scrollbar{
+	display: none;
+}
+
+.feed-box{
+ border: 2px solid white;
+ padding: 1em 2em;
+ background-color: white;
+ color: black;
 
 }
-.feed-box{
- border: 2px solid blue;
-
+.feed-box:nth-child(odd){
+	background: #222;
+	color: #fff;
 }
 .heading-wrapper{
 	display: flex;
+	flex-direction: column;
 }
 .club-name-infeed{
 	font-size: small;
 	opacity: 0.6;
+}
+.feed-box .heading{
+}
+.feed-box .club-title{
+	font-size: 1em;
+	font-weight: 300;
+}
+.feed-visible{
+	display: flex;
+}
+.feed-visible .know-more{
+	align-self: flex-end;
+}
+
+.read-more-button{
+	background-color: #222;
+	width: fit-content;
+	border: 1px solid;
+	font-weight: normal;
+	color: #fff;
+	padding: 10px 20px;
+	font-weight: 700;
+	font-size: 1.5em;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+.read-more-button:nth-child(even){
+	background-color: #fff;
+	color: #222;
+}
+.read-more-button:nth-col(odd){
+	background-color: #222;
+	color: #fff;
 }

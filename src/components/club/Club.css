@@ -1,6 +1,8 @@
+
 .club-content{
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 }
 .club-page-navigation{
 	display: flex;

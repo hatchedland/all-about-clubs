@@ -1,6 +1,8 @@
 .news-feed-section{
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
+
 }
 .news-feed-folder{
 	display: flex;
@@ -10,16 +12,19 @@
 }
 .archieve{
 	display: flex;
+	flex-direction: column;
 	gap: 2em;
-	border: 2px solid red;
 	align-self: center;
 	flex-wrap: wrap;
 }
 .archieve .block{
-	border: 2px solid green;
 	width: 12em;
 	height: 12em;
 	text-align: center;
+	font-style: italic;
+	font-weight: 700;
+	background-color: #222;
+	color: #fff;
 
 }
 .block .card-info{
@@ -31,7 +36,28 @@
 	width: min-content;
 	font-size: 1.5em;
 }
-.news-folder{
-	height: 70vh;
-	overflow: hidden;
+
+.news-title{
+	font-size: 3em;
+	font-family:'Courier New', Courier, monospace;
+}
+
+
+@media (max-width: 1236px) and (min-width: 450px) {
+
+
+	.archieve{
+		/* display: flex; */
+		flex-direction: row;
+		margin-top: 2em;
+	
+	}
+	.news-feed-folder{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.news-feed-section{
+		display: flex;
+		flex-direction: row-reverse;
+	}
 }

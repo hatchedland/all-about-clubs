@@ -1,61 +1,108 @@
 .about-us{
 	display: flex;
 	flex-direction: column;
+	min-height: 80vh;
+	justify-content: space-evenly;
+	gap: 7em;
 }
 .about-us-content{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	flex-wrap: wrap;
 	gap: 3em;
 }
 
 .faq{
-	width: 30em;
+	margin-top: 1em;
+	max-width: 30em;
+}
+.faq-title{
+	font-size: 3em;
+	font-family: 'Courier New', Courier, monospace;
+}
+.faq-question:nth-child(even){
+	
+	background-color: #222;
+	color: #fff;
 }
 .faq .faq-question{
 	font-size: 2em;
 	display: flex;
+	align-items: center;
+	padding: 10px 25px;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.subscribe-label{
-	font-size: 2em;
-	width: fit-content;
+.faq .faq-answer{
+	font-size: 1.3em;
+	padding: 0.5em 0.5em;
 }
-.subscribe{
+.faq-question .know-more{
+	align-self: flex-end;
+}
+
+.get-connected-wrapper{
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
+	height: max-content;
+	justify-content: space-between;
+	align-self: flex-start;
+	gap: 5em;
+}
+.connection-title-wrapper{
+	align-self: flex-end;
+}
+.subscribe{
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 1em;
+}
+.subscribe-label{
+	font-size: 2em;
 }
 .email-form{
 	display: flex;
 	flex-direction: row;
-	width: min-content;
+	justify-content: center;
+	align-items: flex-end;
 	gap: 1em;
-	flex-wrap: wrap;
 }
 
 input{
 	font-size: 1.5rem;
 	border: none ;
 	padding-bottom: 3px;
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid #222;
 	outline: none;
 	font-style: italic;
-}
-.submit svg{
-	transform: rotate(-90deg);
+	background: none;
 }
 .submit{
 	width: min-content;
 	height: min-content;
+	padding: 10px 25px;
+	font-size: 1.5em;
+	font-weight: 500;
+	background-color: #222;
+	color: #fff;
+	align-self:baseline;
 }
 .the-team{
 	display: flex;
 	justify-content: center;
+	align-self: center;
+	flex-wrap: wrap;
+	gap: 1em;
 }
 .creator-info .name{
-	font-size: 1.5em;
+	font-size: 2.5em;
 	font-weight: 700;
 	
 }
@@ -68,4 +115,29 @@ input{
 .socials{
 	font-weight: 600;
 	display: flex;
+	align-items: flex-end;
+}
+
+
+
+@media (max-width: 1216px)  {
+
+
+	.faq{
+		margin-top: 1em;
+		max-width: 100%;
+	}
+	.about-us-content{
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		margin: 0 auto;
+	}
+
+}
+@media (max-width: 550px)  {
+
+
+	.email-form{
+		flex-wrap: wrap;
+	}
 }
