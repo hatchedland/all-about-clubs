@@ -17,7 +17,6 @@ export const Club = () => {
 	return (
 		<div className="club-content">
 			<Navbar />
-			<PageTitle title="Magboard" />
 		
 					<div className="club-page-navigation">
 						<ul className="nav items">

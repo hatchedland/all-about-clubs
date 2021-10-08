@@ -5,9 +5,7 @@ import { Feed } from './components/feedsection/NewsFeed';
 import { AboutUs } from './components/aboutus/AboutUs';
 import { Club } from './components/club/Club';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
-import { Navbar } from './components/navbar/Navbar';
 
-import { SmoothProvider } from 'react-smooth-scrolling'
 function App() {
 
   return (

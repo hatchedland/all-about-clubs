@@ -11,14 +11,9 @@ import { HomeContent } from './HomeContent'
 export const Home = () => {
 	return (
 		<div className="home">
-		
-			
-			
-		<Navbar />
-     
        <HomeContent />
-      
         <Feed />
+				<h1 class="fancy_title">Some Title</h1>
 				<AboutUs />
 		</div>
 	)

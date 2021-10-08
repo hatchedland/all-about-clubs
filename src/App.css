@@ -6,9 +6,12 @@
 body{
   margin: auto;
   padding-bottom: 2em;
-  color: #222;
+  color: #27363b;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 15vh;
   padding:0 10vw ;
+}
+a{
+  text-decoration: none;
 }

@@ -1,5 +1,17 @@
 import React from 'react'
 
+
+
+function getStaffPhotos(){
+	
+const url=	fetch('https://api.unsplash.com/photos/random')
+
+
+}
+function images(){
+
+}
+
 export const Staffs = () => {
 	return (
 		<div className="staffs">
@@ -9,7 +21,7 @@ export const Staffs = () => {
 				</div>
 				<div className="staff-photos">
 					<div className="pfp">image[i]
-						<img src="./" alt="something" />
+						<img src={images} alt="something" />
 					</div>
 					<div className="pfp">image[2]</div>
 					<div className="pfp">image[2]</div>

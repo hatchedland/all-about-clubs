@@ -1,24 +1,24 @@
-.about-us{
-	display: flex;
-	flex-direction: column;
-	min-height: 80vh;
-	justify-content: space-evenly;
-	gap: 7em;
-}
+
 .about-us-content{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-
+	height: 100%;
 	flex-wrap: wrap;
-	gap: 3em;
+	margin-bottom: 2em;
+	/* gap: 3em; */
 }
 
 .faq{
-	margin-top: 1em;
 	max-width: 30em;
 }
-.faq-title{
+.about-us-content .connection{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+}
+
+.about-us-content .title{
 	font-size: 3em;
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -38,7 +38,7 @@
 
 .faq .faq-answer{
 	font-size: 1.3em;
-	padding: 0.5em 0.5em;
+	padding: 10px 25px;
 }
 .faq-question .know-more{
 	align-self: flex-end;
@@ -49,12 +49,12 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	height: max-content;
 	justify-content: space-between;
 	align-self: flex-start;
 	gap: 5em;
 }
 .connection-title-wrapper{
+	
 	align-self: flex-end;
 }
 .subscribe{
@@ -63,6 +63,9 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	gap: 1em;
+	
+	margin-top: 1em;
+	width: fit-content;
 }
 .subscribe-label{
 	font-size: 2em;
@@ -94,28 +97,25 @@ input{
 	color: #fff;
 	align-self:baseline;
 }
+.website-by{
+	align-self: flex-end;
+}
 .the-team{
 	display: flex;
-	justify-content: center;
-	align-self: center;
+	justify-content: flex-end ;
+	align-self: flex-end;
+	align-items: flex-end;
 	flex-wrap: wrap;
-	gap: 1em;
-}
-.creator-info .name{
+	gap: 5px;
 	font-size: 2.5em;
 	font-weight: 700;
+	border-top: 1px solid;
+	margin-top: 0.3em;
+	width: fit-content;
+}
+.the-team .name{
+margin-top: 5px;	
 	
-}
-
-.creator-info .branch{
-	font-size: 1em;
-	font-weight: 400;
-	opacity: 0.7;
-}
-.socials{
-	font-weight: 600;
-	display: flex;
-	align-items: flex-end;
 }
 
 

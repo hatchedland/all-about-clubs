@@ -3,13 +3,13 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 2em;
-	
+	scroll-behavior: smooth;
 }
 .home-content{
 	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 .site-description{
 	width: 90%;
@@ -29,3 +29,8 @@
 	align-self: flex-end;
 }
 
+.home-content .welcome{
+	font-size: 4rem;
+	font-style: italic;
+	font-family: SeviloNova,serif;
+}

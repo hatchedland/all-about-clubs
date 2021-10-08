@@ -2,15 +2,13 @@
 .feed-box-wrapper{
 	display: flex;
 	flex-direction: column;
-	width: fit-content;
+	max-width: 50em;
 	padding: 2em 2em;
 	align-self: flex-end;
-	max-width: 50em;
 	overflow-y: scroll;
 	overflow-x:hidden;
 	height: 70vh;
 	scroll-behavior: smooth;
-	
 }
 .feed-box-wrapper::-webkit-scrollbar{
 	display: none;
@@ -21,7 +19,6 @@
  padding: 1em 2em;
  background-color: white;
  color: black;
-
 }
 .feed-box:nth-child(odd){
 	background: #222;
@@ -36,6 +33,7 @@
 	opacity: 0.6;
 }
 .feed-box .heading{
+	font-weight: 500;
 }
 .feed-box .club-title{
 	font-size: 1em;
@@ -43,20 +41,28 @@
 }
 .feed-visible{
 	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
-.feed-visible .know-more{
+.feed-visible .know-more svg{
 	align-self: flex-end;
 }
+.feed-not-visible{
 
-.read-more-button{
+	padding: 1em 10px;
+}
+.feed-not-visible .more-info{
+	font-weight: normal;
+	font-size: 1.2em;
+	padding-bottom: 1em;
+}
+.feed-not-visible .read-more-button{
 	background-color: #222;
 	width: fit-content;
 	border: 1px solid;
 	font-weight: normal;
 	color: #fff;
 	padding: 10px 20px;
-	font-weight: 700;
-	font-size: 1.5em;
 	display: flex;
 	gap: 5px;
 	align-items: center;

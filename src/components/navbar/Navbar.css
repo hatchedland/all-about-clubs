@@ -1,29 +1,12 @@
-.header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	margin: 0 auto;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 10vw;
-	gap: 2em;
-	background-color: #fff;
-}
-.navbar ul{
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	gap: 2em;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	list-style: none;
-	font-style: italic;
-	font-size: 18px;
+.navbar{
 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
 }
-.navbar li{
-	padding-bottom: 3px;
-	border-bottom: 1px solid ;
+.back-to-home{
+
+	padding: 0 10vw;
+
 }

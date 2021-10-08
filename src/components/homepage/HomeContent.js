@@ -7,7 +7,7 @@ export const HomeContent = () => {
 		<div className="home-content">
 			<div className="site-description">
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, 
+					<span className="welcome">Welcome </span>ipsum dolor sit amet consectetur adipisicing elit. Laborum, 
 					est. Vel sit debitis deserunt,
 					 dolores reiciendis officia animi quisquam ipsum <Link to='/fee/feed'><strong>pariatur</strong></Link> asperiores natus.
 					  Consequatur ducimus suscipit reprehenderit. 
