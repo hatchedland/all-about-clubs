@@ -8,9 +8,7 @@ import { Arrow, HandShake, LinkedIn, KnowMore } from '../icons/Icons'
 
 
 
-
 export const AboutUs = () => {
-
 
 	const Content = () => {
 

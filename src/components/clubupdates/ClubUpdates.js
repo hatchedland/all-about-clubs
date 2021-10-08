@@ -7,6 +7,7 @@ import axios from 'axios'
 
 export const ClubUpdates = (props) => {
 	const [isShow, setIsShow] = React.useState(false);
+
 	const handleClick = () => {
 		setIsShow(!isShow);
 	}
@@ -19,11 +20,7 @@ export const ClubUpdates = (props) => {
 			</div>
 		);
 	}
-	if (isShow) {
-		const styles = {
-			transform: 'rotate(180deg)'
-		}
-	}
+
 	return (
 		<div className="feed-box-wrapper">
 			<div className="feed-box">
@@ -32,28 +29,9 @@ export const ClubUpdates = (props) => {
 						<h1 className="heading">Jt sec forms out now</h1>
 						<h3 className="club-title">Magboard	</h3>
 					</div>
-					<div onClick={handleClick} className="know-more"><KnowMore /></div>
+					<div onClick={handleClick} className="know-more" className={isShow ? "collapse-button" : "" } ><KnowMore /></div>
 				</div>
-				{isShow ? <Content content='nothing' /> : <></>}
-			</div>
-			<div className="feed-box">
-				<div className="feed-visible">
-					<div className="heading-wrapper">
-						<h1 className="heading">Officer, yournapped, yeah I killed her :)</h1>
-						<h3 className="club-title">oops murdered</h3>
-					</div>
-					<div onClick={handleClick} className="know-more"><KnowMore /></div>
-				</div>
-				{isShow ? <Content content='nothing' /> : <></>}
-			</div><div className="feed-box">
-				<div className="feed-visible">
-					<div className="heading-wrapper">
-						<h1 className="heading">Officer, your daughter has been kidnapped, yeah I killed her :)</h1>
-						<h3 className="club-title">oops murdered</h3>
-					</div>
-					<div onClick={handleClick} className="know-more"><KnowMore /></div>
-				</div>
-				{isShow ? <Content content='nothing' /> : <></>}
+				{isShow ? <Content/> : <></>}
 			</div>
 		</div>
 	)

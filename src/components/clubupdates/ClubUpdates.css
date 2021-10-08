@@ -75,3 +75,6 @@
 	background-color: #222;
 	color: #fff;
 }
+.collapse-button{
+	transform: rotate(180deg);
+}
