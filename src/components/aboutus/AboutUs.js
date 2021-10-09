@@ -4,6 +4,8 @@ import { PageTitle } from '../pagetitle/PageTitle'
 import './AboutUs.css'
 import faq from '../../data/faq.json'
 import { Arrow, HandShake, LinkedIn, KnowMore } from '../icons/Icons'
+import Faqpost from './FaqPost'
+
 
 
 
@@ -16,16 +18,7 @@ export const AboutUs = () => {
 
 		const DisplayData = faq.map(
 			(info) => {
-				return (
-					<>
-						<div className="faq-question">
-							<p>{info.question}</p>
-							<div onClick={() => { setIsShow(!isShow) }} className="know-more"><KnowMore /></div>
-						</div>
-
-						{isShow ? <p className="faq-answer">{info.answer}</p> : <></>}
-					</>
-				);
+				return <Faqpost id={info.id} question={info.question} answer={info.answer} />
 			}
 		)
 		return DisplayData

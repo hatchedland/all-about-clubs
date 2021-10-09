@@ -17,7 +17,7 @@ export const HomeContent = () => {
 				</p>
 			</div>
 			
-			<div className="explore">Explore<Arrow /></div>
+			<div className="explore">Latest Feed<Arrow /></div>
 		</div>
 	)
 }

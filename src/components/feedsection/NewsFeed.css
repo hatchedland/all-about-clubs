@@ -12,50 +12,74 @@
 	gap: 1em;
 }
 .news-folder{
-flex-grow: 0.8;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 60%;
 }
-.archieve{
+.pinned-feed{
+	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
-	gap: 2em;
-	align-self: center;
-	flex-wrap: wrap;
+	width: max-content;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 35%;
 }
-.archieve .block{
-	width: 12em;
-	height: 12em;
-	text-align: center;
-	font-style: italic;
-	font-weight: 700;
-	background-color: #222;
+.pinned-feed-header{
+	font-size: 2em;
 	color: #fff;
-
-}
-.block .card-info{
-	position: relative;
-	top: 50%;
-	margin: auto;
-	text-align: justify;
-	text-align: justify;
-	width: min-content;
-	font-size: 1.5em;
+	background-color: #222;
+	font-weight: 600;
+	display: flex;
+	gap: 10px;
 }
 
+.pinned-feed-header path{
+	fill: ivory;
+}
+.feed-element{
+	border: 2px solid green;
+}
+.feed-element-header{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	background-color: gray;
+}
+.feed-content-wrapper{
+	display: flex;
+	flex-direction: row;
+	border: 2px solid red;
+}
+.feed-content{
+	display: flex;
+	flex-direction: column;
+}
+.feed-content .club-name{
+	font-size: 2em;
+}
+.pinned-feed .feed-description{
+	padding: 1em;
+	border: 2px solid blue;
+	font-size: 0.9em;
+}
+.feed-description .read-more{
+	margin:   0.5em 0 ;
+	width: fit-content;
+	border: 1px solid;
+	align-items: center;
+	font-size: 1em;
+}
 .news-title{
 	font-size: 3em;
 	font-family:'Courier New', Courier, monospace;
 }
 
 
-@media (max-width: 1260px) and (min-width: 450px) {
+/* @media (max-width: 1260px) and (min-width: 450px) {
 
 
-	.archieve{
-		/* display: flex; */
-		flex-direction: row;
-		margin-top: 2em;
 	
-	}
 	.news-feed-folder{
 		display: flex;
 		flex-direction: row-reverse;
@@ -64,4 +88,4 @@ flex-grow: 0.8;
 		display: flex;
 		flex-direction: row-reverse;
 	}
-}
+} */

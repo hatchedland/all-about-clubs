@@ -83,7 +83,16 @@ export const KnowMore = () => {
 	return (
 		<div >
 			<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" className="cursor-up">
-				<path d="M45 3.15L41.85 0L4.5 37.35V29.25H0V45H15.75V40.5H7.65L45 3.15Z" fill="black" />
+				<path d="M45 3.15L41.85 0L4.5 37.35V29.25H0V45H15.75V40.5H7.65L45 3.15Z" fill="#222" id="Arrow"/>
+			</svg>
+		</div>
+	)
+}
+export const KnowMoreDark = () => {
+	return (
+		<div >
+			<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" className="cursor-up">
+				<path d="M45 3.15L41.85 0L4.5 37.35V29.25H0V45H15.75V40.5H7.65L45 3.15Z" fill="#fff" id="Arrow"/>
 			</svg>
 		</div>
 	)

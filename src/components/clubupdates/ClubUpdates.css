@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: column;
 	max-width: 50em;
-	padding: 2em 2em;
 	align-self: flex-end;
 	overflow-y: scroll;
 	overflow-x:hidden;
