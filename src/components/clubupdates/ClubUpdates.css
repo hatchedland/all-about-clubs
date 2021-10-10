@@ -70,6 +70,7 @@
 	background-color: #fff;
 	color: #222;
 }
+
 .read-more-button:nth-col(odd){
 	background-color: #222;
 	color: #fff;

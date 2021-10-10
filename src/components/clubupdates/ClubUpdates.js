@@ -3,35 +3,72 @@ import { useState, useEffect } from 'react'
 import { Arrow, KnowMore, ReadMore } from '../icons/Icons'
 import './ClubUpdates.css'
 import axios from 'axios'
+import updates from '../../data/updates.json'
+
 
 
 export const ClubUpdates = (props) => {
 	const [isShow, setIsShow] = React.useState(false);
+	const [pinFeed, setPinFeed] = React.useState(false);
 
 	const handleClick = () => {
 		setIsShow(!isShow);
 	}
 
-	const Content = () => {
+
+	const Content = (props) => {
 		return (
 			<div className="feed-not-visible">
-				<h4 className="more-info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium soluta deleniti magni qui autem dolorum. Eius quis labore, autem sint minus optio aperiam ex doloribus quaerat fuga pariatur sunt!</h4>
-				<div className="read-more-button" >Read more<ReadMore /></div>
+				{props.description}
+			<div className="read-more-button" >Read more<ReadMore /></div>
 			</div>
 		);
 	}
+
+	const addPin = () => {
+		/*
+		render data here 
+		*/
+	}
+	
+	const removePin = () => {
+		/*
+		render data here 
+		*/
+	}
+	
+	
+	function handlePinFeed(event) {
+
+		setPinFeed(!pinFeed)
+
+	}
+
+
+	const displayUpdate = updates.map((update) => {
+		return (
+			<ul>
+				{update.club}
+				<div className="h1">Lorem, ipsum dolor.</div>
+				<li>{isShow ? <Content description={update.description}/> : <></>}</li>
+				<div onClick={handlePinFeed} className="pin-feed" className={(update.pinned == pinFeed ) ? addPin: removePin} ><ReadMore /></div>
+			</ul>
+		);
+	})
+
+
+
 
 	return (
 		<div className="feed-box-wrapper">
 			<div className="feed-box">
 				<div className="feed-visible">
 					<div className="heading-wrapper">
-						<h1 className="heading">Jt sec forms out now</h1>
-						<h3 className="club-title">Magboard	</h3>
+						{displayUpdate}
 					</div>
-					<div onClick={handleClick} className="know-more" className={isShow ? "collapse-button" : "" } ><KnowMore /></div>
+					<div onClick={handleClick} className="know-more" className={isShow ? "collapse-button" : ""} ><KnowMore /></div>
 				</div>
-				{isShow ? <Content/> : <></>}
+				
 			</div>
 		</div>
 	)

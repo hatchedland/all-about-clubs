@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .home{
 	display: flex;
 	flex-direction: column;
@@ -10,13 +12,29 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.link-to-club{
+	font-size: 2.3rem;
+	display: inline;
+	color: #222;
+	font-style:initial;
+	
+	font-weight: 500;
 }
 .site-description{
 	width: 90%;
-	font-size: 2.5em;
+	font-size: 2.3em;
 	text-align: justify;
 	align-self: center;
-
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	font-family: 'Lato', sans-serif;
+	gap: 5px;
+	font-family: 'Lato', sans-serif;
 }
 .explore{
 	float: right;
@@ -29,8 +47,28 @@
 	align-self: flex-end;
 }
 
-.home-content .welcome{
-	font-size: 4rem;
-	font-style: italic;
-	font-family: SeviloNova,serif;
+
+.club-tagline{
+	all: revert;
+	text-align: justify;
+	width: fit-content;
+	font-size: 0.7em;
+	line-height: 0.8;
+		font-style:normal;
+		
+	font-weight: 500;
+}
+
+.greeting-text{
+	display: flex;
+	all: revert;
+}
+.club-wrapper{
+	display: flex;
+	align-self: center;
+	align-self: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	border-bottom: 0.3px solid;
+	padding-bottom: 5px;
 }

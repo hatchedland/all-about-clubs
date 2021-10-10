@@ -104,11 +104,6 @@ li{
 	display: flex;
 	gap: 0.5em;
 }
-.read-more svg{
-	color: #fff;
-	rotate: 225deg;
-}
-
 
 @media (max-width: 900px) {
 	.club-page-navigation{
