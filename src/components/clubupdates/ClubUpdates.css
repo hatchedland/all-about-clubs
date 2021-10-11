@@ -14,25 +14,29 @@
 }
 
 .feed-box{
- border: 2px solid white;
- padding: 1em 2em;
- background-color: white;
- color: black;
+ padding: 0 2em;
+ border: 0.5px solid gray;
+ border-radius: 5px;
 }
-.feed-box:nth-child(odd){
-	background: #222;
-	color: #fff;
+.club-update{
+	padding: 5px;
+	font-size: 2rem;
+	font-weight: 600;
+}
+.feed-box .club-name{
+	font-size: 1.1em;
+}
+.feed-box .feed-not-visible{
+	border-top: 1px solid ;
+	font-size: 1.3em;
+	padding: 1rem;
+}
+.feed-box .read-more{
+	font-size: 0.7em;
 }
 .heading-wrapper{
 	display: flex;
 	flex-direction: column;
-}
-.club-name-infeed{
-	font-size: small;
-	opacity: 0.6;
-}
-.feed-box .heading{
-	font-weight: 500;
 }
 .feed-box .club-title{
 	font-size: 1em;
@@ -40,41 +44,19 @@
 }
 .feed-visible{
 	display: flex;
+	padding: 1rem;
 	justify-content: space-between;
 	width: 100%;
 }
-.feed-visible .know-more svg{
-	align-self: flex-end;
-}
-.feed-not-visible{
-
-	padding: 1em 10px;
-}
-.feed-not-visible .more-info{
-	font-weight: normal;
-	font-size: 1.2em;
-	padding-bottom: 1em;
-}
-.feed-not-visible .read-more-button{
-	background-color: #222;
-	width: fit-content;
-	border: 1px solid;
-	font-weight: normal;
-	color: #fff;
-	padding: 10px 20px;
+.feed-options{
 	display: flex;
-	gap: 5px;
 	align-items: center;
+	gap: 2em;
 }
-.read-more-button:nth-child(even){
-	background-color: #fff;
-	color: #222;
+.feed-options svg{
+	transform: scale(1.3);
 }
 
-.read-more-button:nth-col(odd){
-	background-color: #222;
-	color: #fff;
-}
 .collapse-button{
 	transform: rotate(180deg);
 }

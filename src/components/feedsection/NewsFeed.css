@@ -17,7 +17,6 @@
 	flex-basis: 60%;
 }
 .pinned-feed{
-	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
 	align-self: flex-start;
@@ -28,19 +27,23 @@
 }
 .pinned-feed-header{
 	font-size: 1.5em;
-	color: #fff;
+	color: #222;
+	font-weight: 600	;
+	border: 1px solid gray;
 	justify-content: flex-start;
 	padding: 5px;
-	background-color: #222;
+	padding-left: 1em;
+	border-radius: 5px;
+	background-color: #c2c1c2;
 	display: flex;
 	gap: 15px;
 }
 
-.pinned-feed-header path{
-	fill: ivory;
-}
 .feed-element{
-	border: 2px solid green;
+	border: 1px solid gray;
+	margin-top: 1em;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .feed-content-wrapper{
@@ -56,22 +59,32 @@
 }
 .feed-content .club-name{
 	font-size: 2em;
+	font-weight: 600;
 }
 .feed-content-options{
 	display: flex;
 	gap: 2em;
 }
 .pinned-feed .feed-description{
-	padding: 1em;
-	border: 2px solid blue;
+	/* padding: 1em; */
+	margin: 0.6em;
+	border-top: 0.5px solid;
+	padding-top: 5px;
 	font-size: 0.9em;
 }
-.feed-description .read-more{
+ .read-more{
+	
 	margin:   0.5em 0 ;
 	width: fit-content;
 	border: 1px solid;
+	padding: 0.8em 1.3em;
+	font-size: 0.9em;
+	background-color: #0a7df5;
+	border: none;
+	color: #fff;
+
+	border-radius: 50px;
 	align-items: center;
-	font-size: 1em;
 }
 .news-title{
 	font-size: 3em;

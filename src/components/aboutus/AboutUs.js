@@ -28,34 +28,21 @@ export const AboutUs = () => {
 		<div className="about-us-content">
 
 			<div className="faq">
-				<h1 className="faq title">FAQ</h1>
+				<h1 className="faq-title"><Arrow />Frequenctly asked</h1>
 				<Content />
 			</div>
 
 			<div className="connection">
 
 				<div className="getconnected-wrapper">
-					<div className="connection-title-wrapper"><PageTitle title="Get Connected" /></div>
+					<div className="connection-title-wrapper"></div>
 					<div className="subscribe">
-						<p className="subscribe-label">Subscribe for regular updates</p>
+						<p className="subscribe-label"><PageTitle title="Subscribe for regular updates" /></p>
 						<div className="email-form">
 							<input type="email" placeholder="Enter your email here" />
 							<div className="submit">Submit</div>
 						</div>
 					</div>
-				</div>
-
-
-				<div className="website-by">
-					<PageTitle title="Developers" />
-					<div className="the-team">
-						
-						<div className="name"><a href="https://google.com" target="_blank">rajan</a></div>
-						&
-						<div className="name"><a href="https://google.com" target="_blank">aniket</a></div>
-
-					</div>
-
 				</div>
 			</div>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Arrow, KnowMore, ReadMore } from '../icons/Icons'
+import { Arrow, KnowMore, Pin, ReadMore } from '../icons/Icons'
 import './ClubUpdates.css'
 import axios from 'axios'
 import updates from '../../data/updates.json'
@@ -19,8 +19,8 @@ export const ClubUpdates = (props) => {
 	const Content = (props) => {
 		return (
 			<div className="feed-not-visible">
-				{props.description}
-			<div className="read-more-button" >Read more<ReadMore /></div>
+				<div className="update-description">{props.description}</div>
+				<div className="read-more">Read more</div>
 			</div>
 		);
 	}
@@ -30,14 +30,14 @@ export const ClubUpdates = (props) => {
 		render data here 
 		*/
 	}
-	
+
 	const removePin = () => {
 		/*
 		render data here 
 		*/
 	}
-	
-	
+
+
 	function handlePinFeed(event) {
 
 		setPinFeed(!pinFeed)
@@ -47,28 +47,26 @@ export const ClubUpdates = (props) => {
 
 	const displayUpdate = updates.map((update) => {
 		return (
-			<ul>
-				{update.club}
-				<div className="h1">Lorem, ipsum dolor.</div>
-				<li>{isShow ? <Content description={update.description}/> : <></>}</li>
-				<div onClick={handlePinFeed} className="pin-feed" className={(update.pinned == pinFeed ) ? addPin: removePin} ><ReadMore /></div>
-			</ul>
-		);
-	})
-
-
-
-
-	return (
-		<div className="feed-box-wrapper">
 			<div className="feed-box">
+				
 				<div className="feed-visible">
 					<div className="heading-wrapper">
-						{displayUpdate}
+						<div className="club-update">{update.update}</div>
+						<div className="club-name">{update.club}</div>
 					</div>
-					<div onClick={handleClick} className="know-more" className={isShow ? "collapse-button" : ""} ><KnowMore /></div>
+					<div className="feed-options">
+						<div onClick={handleClick} className="know-more" className={isShow ? "collapse-button" : ""} ><KnowMore /></div>
+						<div onClick={handlePinFeed} className="pin-feed" className={(update.pinned == pinFeed) ? addPin : removePin} >	<Pin />{Content}</div>
+					</div>
 				</div>
-				
+				<div>{isShow ? <Content description={update.description} /> : <></>}</div>
+			</div>
+		);
+	})
+	return (
+		<div className="feed-box-wrapper">
+			<div>
+					{displayUpdate}
 			</div>
 		</div>
 	)

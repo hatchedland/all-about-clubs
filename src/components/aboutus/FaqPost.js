@@ -10,7 +10,7 @@ const Faqpost = (props) => {
   
   return (
     <div>
-      <div className="faq-question" style={ ( props.id % 2 != 0) ? {backgroundColor: '#222', color: '#fff'} : null }>
+      <div className="faq-question" style={ ( props.id % 2 != 0) ? {backgroundColor: '#c2c1c2'} : null }>
         <p >{props.question}</p>
         <div onClick={displayHandler} className="know-more">
           <div style={show ? {transform: 'rotate(180deg)'}: null }>{ ( props.id % 2 == 0) ? <KnowMore /> : <KnowMoreDark /> }</div>

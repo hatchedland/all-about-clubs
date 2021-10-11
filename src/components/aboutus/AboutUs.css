@@ -2,26 +2,46 @@
 .about-us-content{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	height: 100%;
 	flex-wrap: wrap;
 	margin-bottom: 2em;
-	/* gap: 3em; */
+	gap: 3em;
 }
 
 .faq{
-	min-width: 20em;
-	max-width: 25em;
+	height: 100%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 40%;
+}
+.faq-title{
+	font-size: 3em;
+	color: #6e6e6e;
+	border-top: 1px solid gray;
+	width: min-content;
+	padding-top: 5px;
+	display: flex;
+	gap: 1em;
+	align-items: center;
 }
 .about-us-content .connection{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	align-items: center;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 40%;
 
 }
 
 .about-us-content .title{
 	font-size: 3em;
-	font-family: 'Courier New', Courier, monospace;
 }
 
 .faq .faq-question{
@@ -31,12 +51,8 @@
 	padding: 10px 25px;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid;
-}
-.dark-bg{
-	
-	background-color: #222;
-	color: #fff;
+	border: 1px solid gray;
+	border-radius: 5px;
 }
 
 .faq .faq-answer{
@@ -72,7 +88,8 @@
 	width: fit-content;
 }
 .subscribe-label{
-	font-size: 2em;
+	font-size: 1em;
+	color: #6e6e6e 
 }
 .email-form{
 	display: flex;
@@ -80,46 +97,27 @@
 	justify-content: center;
 	align-items: flex-end;
 	gap: 1em;
+	width: min-content;
 }
 
 input{
 	font-size: 1.5rem;
 	border: none ;
 	padding-bottom: 3px;
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid gray;
 	outline: none;
-	font-style: italic;
 	background: none;
 }
 .submit{
 	width: min-content;
 	height: min-content;
-	padding: 10px 25px;
-	font-size: 1.5em;
-	font-weight: 500;
-	background-color: #222;
+	padding: 0.8em 1.9em;
+	/* font-size: 1.5em; */
+	font-weight: 600;
+	background-color: #49d4b1;
+	border-radius: 50px;
 	color: #fff;
 	align-self:baseline;
-}
-.website-by{
-	align-self: flex-end;
-}
-.the-team{
-	display: flex;
-	justify-content: flex-end ;
-	align-self: flex-end;
-	align-items: flex-end;
-	flex-wrap: wrap;
-	gap: 5px;
-	font-size: 2.5em;
-	font-weight: 700;
-	border-top: 1px solid;
-	margin-top: 0.3em;
-	width: fit-content;
-}
-.the-team .name{
-margin-top: 5px;	
-	
 }
 
 

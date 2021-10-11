@@ -41,8 +41,10 @@
 	gap: 0.5em;
 	font-size: 3em;
 	font-weight:200;
-	font-style: italic;
+	color: #6e6e6e;
+	font-weight: 600;
 	align-self: flex-end;
+	border-bottom: 1px solid gray;
 }
 
 
@@ -52,8 +54,7 @@
 	width: fit-content;
 	font-size: 0.7em;
 	line-height: 0.8;
-	font-style:normal;	
-	font-weight: 500;
+	font-style:normal;
 }
 
 .greeting-text{
@@ -98,4 +99,24 @@
 	vertical-align: bottom;
 	fill: #6e6e6e;
 
+}
+
+.home-footer{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.home-footer a{
+	font-size: 1.2em;
+	color: #222;
+	font-weight: 600;
+}
+.home-footer svg{
+	transform: scale(0.7);
+}
+.home-footer path{
+	fill: #ef4626;
 }
