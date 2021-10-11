@@ -20,18 +20,20 @@
 	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
+	align-self: flex-start;
 	width: max-content;
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: 35%;
 }
 .pinned-feed-header{
-	font-size: 2em;
+	font-size: 1.5em;
 	color: #fff;
+	justify-content: flex-start;
+	padding: 5px;
 	background-color: #222;
-	font-weight: 600;
 	display: flex;
-	gap: 10px;
+	gap: 15px;
 }
 
 .pinned-feed-header path{
@@ -40,16 +42,13 @@
 .feed-element{
 	border: 2px solid green;
 }
-.feed-element-header{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	background-color: gray;
-}
+
 .feed-content-wrapper{
 	display: flex;
 	flex-direction: row;
-	border: 2px solid red;
+	margin: 0 10px;
+	justify-content: space-between;
+	align-items: center;
 }
 .feed-content{
 	display: flex;
@@ -57,6 +56,10 @@
 }
 .feed-content .club-name{
 	font-size: 2em;
+}
+.feed-content-options{
+	display: flex;
+	gap: 2em;
 }
 .pinned-feed .feed-description{
 	padding: 1em;

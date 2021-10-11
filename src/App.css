@@ -15,6 +15,7 @@ body{
 a{
   text-decoration: none;
 }
-.white-space{
-  width: 1em;
+
+.link{
+  color: #0a7df5;
 }

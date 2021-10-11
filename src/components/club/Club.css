@@ -118,7 +118,6 @@ li{
 		width: fit-content;
 		padding-bottom: 3px;
 		padding-top: 3px;
-		border-bottom: 1px solid;
 	}
 	.club-page-navigation .socials{
 		display: grid;
@@ -144,4 +143,3 @@ li{
 
 	
 }
-
