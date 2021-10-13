@@ -2,6 +2,8 @@ import { useState } from "react";
 import { KnowMore, KnowMoreDark} from "../icons/Icons";
 import '../clubupdates/ClubUpdates.css';
 import "./AboutUs.css";
+
+
 const Faqpost = (props) => {
   const [show, setShow] = useState(false);
   const displayHandler = () => {

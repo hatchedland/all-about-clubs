@@ -15,6 +15,7 @@ export const AboutUs = () => {
 	const Content = () => {
 
 		const [isShow, setIsShow] = React.useState(false);
+		
 
 		const DisplayData = faq.map(
 			(info) => {

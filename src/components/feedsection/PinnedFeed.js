@@ -4,15 +4,19 @@ import { ReadMore, Arrow, Pin, CloseButton, KnowMoreDark, KnowMore } from '../ic
 
 
 export const PinnedFeed = () => {
-	const [isShow, setIsShow] = React.useState(false);
+	const [isPinned, setIsPinned] = React.useState(false);
+	const [expandPinFeed, setExpandPinFeed] = React.useState(false);
 
-	const handleKnowMore = () => {
-		setIsShow(!isShow);	
+	const handleExpandPinFeed = () => {
+		setExpandPinFeed((Prev) => !Prev );	
+
+	}
+	const handlePinnedFeed = () => {
+		setIsPinned(!isPinned);	
 
 	}
 
-
-	function showFeedDescription () {
+	const ShowFeedDescription = () => {
 		return(
 			<div className="feed-description">
 			Lorem ipsum, dolor sit amet consectetur adipisicing elit. At corporis ex dolores pariatur asperiores veniam animi delectus quas nobis maxime!
@@ -35,37 +39,12 @@ export const PinnedFeed = () => {
 						<div className="title">Pandora quiz results</div>
 					</div>
 					<div className="feed-content-options">
-						<div className="know-more" onClick={handleKnowMore}><KnowMore /></div>
-						<CloseButton />
+						<div className="know-more" onClick={handleExpandPinFeed}><KnowMore /></div>
+						<div className="remove-pin" onClick={handlePinnedFeed}>	<CloseButton /></div>
 					</div>
 				</div>
-				{isShow ? {showFeedDescription}: null}
+				{expandPinFeed ? <ShowFeedDescription />: null}
 			</div>
-
-			{/* second element */}
-			<div className="feed-element">
-				<div className="feed-content-wrapper">
-					<div className="feed-content">
-						<div className="club-name">lorem</div>
-						<div className="title">Lorem ipsum dolor sit amet.</div>
-					</div>
-					<div className="feed-content-options">
-						<KnowMore />
-						<CloseButton />
-					</div>
-				</div>
-				<div className="feed-description">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. At corporis ex dolores pariatur asperiores veniam animi delectus quas nobis maxime!
-					<div className="read-more">Read More</div>
-				</div>
-			</div>
-
-
-
-
-
-
-
 
 
 

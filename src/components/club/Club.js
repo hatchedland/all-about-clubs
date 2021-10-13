@@ -1,10 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PageTitle } from '../pagetitle/PageTitle'
-import { Navbar } from '../navbar/Navbar'
-import { Facebook, Instagram, LinkedIn, Website } from '../icons/Icons'
-
-
-// import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Arrow, BackToHome, Email, Facebook, Instagram, LinkedIn, Website } from '../icons/Icons'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './Club.css'
 import { LatestFeed } from './LatestFeed'
@@ -12,35 +8,64 @@ import { Staffs } from './Staffs'
 import { About } from './About'
 import { Event } from './Event'
 
+
+
+
+const ToggleMenu = () => {
+
+	const [isToggle, setIsToggle] = React.useState(false);
+
+	const sideNav = () => {
+		setIsToggle(true)
+	}
+	const NavOpen = () => {
+		return (
+			<div className="club-page-navigation">
+				<ul className="nav-items">
+					<Link exact to="/"><BackToHome /></Link>
+					<Link to="/fee/feed"><li>Latest post</li></Link>
+					<Link to="/fee/staffs"><li>Staffs</li></Link>
+					<Link to="/fee/events"><li>Events</li></Link>
+					<Link to="/fee/about"><li>About</li></Link>
+				</ul>
+				<div className="email"><PageTitle title="Send your content here" /><Email /></div>
+				<ul className="nav-socials">
+					<a href=""><li><Instagram /></li></a>
+					<a href=""><li><Facebook /></li></a>
+					<a href=""><li><LinkedIn /></li></a>
+					<a href=""><li><Website /></li></a>
+				</ul>
+			</div>
+		)
+	}
+	const NavClose = () => {
+		return (
+			<div className="club-page-navigation">
+			 idk
+			</div>
+		)
+	}
+	return (
+		<div>
+			{(window.innerWidth>=1200) ? <NavOpen /> : <NavClose />}
+		</div>
+	)
+}
+
 export const Club = () => {
 
 	return (
 		<div className="club-content">
-			<Navbar />
-		
-					<div className="club-page-navigation">
-						<ul className="nav items">
-							<li><Link to="/fee/feed">Latest post</Link></li>
-							<li><Link to="/fee/staffs">Staffs</Link></li>
-							<li><Link to="/fee/events">Events</Link></li>
-							<li><Link to="/fee/about">About</Link></li>
-						</ul>
-						<ul className="nav socials">
-							<li><Instagram /></li>
-							<li><Facebook /></li>
-							<li><LinkedIn /></li>
-							<li><Website /></li>
-						</ul>
-					</div>
-					<div className="club-info">
+			<ToggleMenu />
+			<div className="club-info">
+				<div className="club-name"><div className="page-title-wrapper"><PageTitle title="MagBoard" /></div><Arrow /></div>
+				<Route path="/fee/feed" component={LatestFeed} />
+				<Route path="/fee/events" component={Event} />
+				<Route path="/fee/staffs" component={Staffs} />
+				<Route path="/fee/about" component={About} />
 
-						<Route path="/fee/feed" component={LatestFeed} />
-						<Route path="/fee/events" component={Event} />
-						<Route path="/fee/staffs" component={Staffs} />
-						<Route path="/fee/about" component={About} />
+			</div>
 
-					</div>
-			
 
 		</div>
 	)

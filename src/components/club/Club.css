@@ -1,46 +1,68 @@
 
 .club-content{
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	height: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .club-page-navigation{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	align-self: flex-end;
-	width: 80%;
 	margin: 2em 0;
 	padding-bottom: 7px;
-	
+	align-items: center;
+	width: min-content;
 	gap: 3em;
-	border-bottom: 1px solid;
 }
-.club-page-navigation .nav{
+.club-page-navigation .nav-socials{
 	display: flex;
-	justify-content: space-between;
+	gap: 1em;
+	list-style-type: none;
 
 }
-.club-page-navigation .socials{
-	width: 10em;
-	align-self: flex-end;
-	
-	justify-self: center;
-}
-.club-page-navigation .items{
+
+.club-page-navigation .nav-items{
 	font-size: 0.9em;
-	width: 20em;
-	
+	display: flex;
+	flex-direction: column;
+
+	gap: 1em;	
 	
 }
-li{
+.club-page-navigation .email{
+	font-size: 0.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	
+}
+
+
+.nav-items li{
+	width: 12em;
+	text-align: center;
+	padding: 1em 0;
+	border: 1px solid gray;
 	list-style-type: none; 
 }
 .club-info{
 	width: 80%;
-	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
-
+.club-info .club-name{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	/* padding: 2em; */
+	padding-bottom: 1.5em;
+	gap: 1em;
+}
+.club-info .club-name .page-title-wrapper{
+	padding-bottom: 5px;
+	border-bottom: 1px solid ;
+}
 
 /* staffs */
 .staffs{
@@ -74,6 +96,16 @@ li{
 	min-height: 15em;
 	border: 2px solid red;
 }
+.staff-photos .fig-caption{
+	all: revert;
+	width: 10em;
+	height: 3em;
+	font-weight: 700;
+	font-size: 2em;
+	transform: rotateY('200px');
+}
+
+
 
 
 /* about */
@@ -94,15 +126,14 @@ li{
 	padding-bottom: 3px;
 }
 .event-info{
-	background-color: pink;
-	color: blue;
+	border: 1px solid gray;
+	font-size: 1.5em;
+	border-radius: 5px;
 	padding: 1em 2em 1em 1em ;
 
 }
-.read-more{
-	font-size: 2em;
-	display: flex;
-	gap: 0.5em;
+.event-info .read-more{
+	font-size: 0.6em;
 }
 
 @media (max-width: 900px) {
