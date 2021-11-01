@@ -14,10 +14,6 @@ import { Event } from './Event'
 const ToggleMenu = () => {
 
 	const [isToggle, setIsToggle] = React.useState(false);
-
-	const sideNav = () => {
-		setIsToggle(true)
-	}
 	const NavOpen = () => {
 		return (
 			<div className="club-page-navigation">
@@ -39,15 +35,19 @@ const ToggleMenu = () => {
 		)
 	}
 	const NavClose = () => {
+		console.log("hey")
 		return (
 			<div className="club-page-navigation">
-			 idk
+			 <button className="hamburger">Hamburger{}</button>
 			</div>
 		)
 	}
+	
 	return (
 		<div>
-			{(window.innerWidth>=1200) ? <NavOpen /> : <NavClose />}
+			<NavClose onClick={() => !setIsToggle }/>
+			{/* {(window.innerWidth>=1200) ? <NavOpen /> : <NavClose />} */}
+			{ (isToggle) ? <NavOpen /> : null }
 		</div>
 	)
 }
@@ -63,10 +63,7 @@ export const Club = () => {
 				<Route path="/fee/events" component={Event} />
 				<Route path="/fee/staffs" component={Staffs} />
 				<Route path="/fee/about" component={About} />
-
 			</div>
-
-
 		</div>
 	)
 }

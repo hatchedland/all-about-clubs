@@ -19,7 +19,7 @@ export const ClubUpdates = (props) => {
 
 	const displayUpdate = updates.map((update) => {
 		return (
-			<UpdateBox update={update.update} club={update.club} description={update.description} pinned={update.pinned}/>
+			<UpdateBox update={update.update} club={update.club} description={update.description} pinned={update.pinned} id={update.id}/>
 		);
 	})
 	return (

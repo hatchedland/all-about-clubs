@@ -20,14 +20,14 @@ export const UpdateBox = (props) => {
 
 	
 
-	const addPin = () => {
+	const addedPin = () => {
 		/*
 		render data here 
 		*/
 		return <h1>test1</h1>
 	}
 
-	const removePin = () => {
+	const removedPin = () => {
 		/*
 		render data here 
 		*/
@@ -47,15 +47,14 @@ export const UpdateBox = (props) => {
 	return (
 		<div>
 				<div className="feed-box">
-				
-				<div className="feed-visible" style={(props.id %2 == 0) ? {backgroundColor: '#222'}: null}>
+				<div className="feed-visible"  style={(props.id %2 != 0) ? {backgroundColor: '#c2c1c2'}: null}>
 					<div className="heading-wrapper">
 						<div className="club-update">{props.update}</div>
 						<div className="club-name">{props.club}</div>
 					</div>
 					<div className="feed-options">
 						<div onClick={handleViewMore} className="know-more" className={viewMore ? "collapse-button" : ""} ><KnowMore /></div>
-						<div onClick={handlePinFeed} className="pin-feed" className={(pinFeed == true) ? addPin : removePin} >	<Pin />{Content}</div>
+						<div onClick={handlePinFeed} className="pin-feed" className={(pinFeed == true) ? addedPin : removedPin} >	<Pin />{Content}</div>
 					</div>
 				</div>
 				<div>{viewMore ? <Content description={props.description} /> : <></>}</div>
